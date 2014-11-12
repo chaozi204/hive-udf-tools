@@ -2,9 +2,10 @@ hive-udf-hook
 =============
   
 ## UDF开发及发布过程
+
   1 用户编写UDF实现类
   
-  2 编写完成后，在UDFHooks类中调用相关注册函数：
+  2 编写完成后，在UDFHooks类中调用相关注册函数：<p/>
      调用 FunctionRegistry.registerUDF 注册udf<p/>
      调用 FunctionRegistry.registerUDAF 注册udaf<p/>
      调用FunctionRegistry.registerUDTF  注册udtf<p/>
@@ -15,7 +16,8 @@ hive-udf-hook
   4 上传相应jar包到$HIVE_HOME/auxlib目录下
 
 ## 让hive自动加载udf包（该过程只需要一次执行，目前适应于hive-0.13.1环境）
-  1 如果hive-site.xml文件没有配置如下属性，则需要添加该属性，如果已经存在则省略此过程
+  1 如果hive-site.xml文件没有配置如下属性，则需要添加该属性，如果已经存在则省略此过程<p/>
+  >
   <property>
     <name>hive.exec.driver.run.hooks</name>
     <value>com.chaozi.hive.UDFHooks</value>
