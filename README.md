@@ -3,12 +3,15 @@ hive-udf-hook
   
 ## UDF开发及发布过程
   1 用户编写UDF实现类
+  
   2 编写完成后，在UDFHooks类中调用相关注册函数：
      调用 FunctionRegistry.registerUDF 注册udf
      调用 FunctionRegistry.registerUDAF 注册udaf
      调用FunctionRegistry.registerUDTF  注册udtf
+     
   3 打包
       mvn clean package
+      
   4 上传相应jar包到$HIVE_HOME/auxlib目录下
 
 ## 让hive自动加载udf包（该过程只需要一次执行，目前适应于hive-0.13.1环境）
