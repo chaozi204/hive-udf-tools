@@ -17,10 +17,11 @@ hive-udf-hook
 
 ## 让hive自动加载udf包（该过程只需要一次执行，目前适应于hive-0.13.1环境）
   1 如果hive-site.xml文件没有配置如下属性，则需要添加该属性，如果已经存在则省略此过程<p/>
-  ' <property>
-    <name>hive.exec.driver.run.hooks</name>
-    <value>com.chaozi.hive.UDFHooks</value>
-  </property>
+  >
+  \<property\>
+    \<name>hive.exec.driver.run.hooks\</name>
+    \<value>com.chaozi.hive.UDFHooks\</value>
+  \</property\>
  
   2 创建$HIVE_HOME/auxlib路径，并将自定义udf jar放到该路径下
 
